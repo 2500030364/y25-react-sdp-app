@@ -56,9 +56,9 @@ const AdminLogin = () => {
 
         <h1>Admin Login</h1>
 
-        <p style={{ fontSize: '12px', color: '#666' }}>
+        {/*<p style={{ fontSize: '12px', color: '#666' }}>
           Demo: admin / admin
-        </p>
+        </p>*/}
 
         {error && (
           <div style={{ color: 'red', marginBottom: '10px' }}>
