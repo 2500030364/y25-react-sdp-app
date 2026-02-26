@@ -9,9 +9,6 @@ const Home = () => {
         <button className="hero-btn">Explore Collection</button>
       </div>
 
-      <div className="section">
-        <h2 className="section-title">Our Collections</h2>
-      </div>
     </>
   );
 };

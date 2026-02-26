@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Days at the Morisaki Bookshop",
+    "author": "Satoshi Yagisawa",
+    "description": "A  story about healing and finding purpose in a quiet Tokyo bookshop.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxIbUkzH6OluJJOdZNe756hZyVYz4Vkm8fG8z8bTdoiD_2kTlLfQqaqYXYgZcfol68VxjbptnelzvR4PikUJb1Bm15teFN-b59_KdWb6DlNvCisg3m2aPB"
+  },
+  {
+    "id": 2,
+    "name": "More Days at the Morisaki Bookshop",
+    "author": "Satoshi Yagisawa",
+    "description": "The beautiful continuation of life, love, and books at the Morisaki bookshop.",
+    "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR88FssRuP85yZV9QS-Gxx5KC3g3h9tXav_xMBTlpCnvpz890IhxgOwekCtGIbo-N38GJskLCxS8R5LOPBvZv0o1DUfslizPmntsaciegg"
+  },
+  {
+    "id": 3,
+    "name": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "description": "A psychological thriller about a woman who refuses to speak after committing a shocking crime.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS6YheAg9wOqtAJd6RUUkrFn51LZVZjT_G0XrxPcipk3S-XrzStFNK18QVB9EZPc8scBdIDXVN2k7wH3rQRC1ai8t1W9e5KR08i4UXsjmw"
+  },
+  {
+    "id": 4,
+    "name": "Never Lie",
+    "author": "Freida McFadden",
+    "description": "A gripping psychological suspense about secrets hidden inside a remote house.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQEhUdpe-KERxEmTS-y1HIe56uLvbTln5ZgnUVu-m4Ihor5yt6u5R7ap0_5R3JO1A9tdFA0SSCawZs6bsCF8ceO9L4OhWYV"
+  },
+  {
+    "id": 5,
+    "name": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "description": "An emotional and powerful story of friendship and resilience in Afghanistan.",
+    "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTm_EDgNmNOwtmgYn_0l5LZu66IJ_JvFdVAMMzRjlQVq4EI6Dh9ynzLu25xbKCo8ubNsmR99R42BcJN1AjYqyETzEL4p7_XUW8f7kO27GsW2tcSK1YXjrbcDw"
+  },
+  {
+    "id": 6,
+    "name": "A Man Called Ove",
+    "author": "Fredrik Backman",
+    "description": "A  story of a grumpy man whose life changes through unexpected friendships.",
+    "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAkmRg0KWhav81xgwhQ2djEItaaI5ggXJ0NPjaj88d6cTycxfuAyi8VRpXi-CqbGLoqaae98QmGJIhEf1OLZoh0Rq2f1TFh4dkP0DmqZZclVWfRH6oQmm6"
+  },
+  {
+    "id": 7,
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "The magical beginning of Harry Potter’s journey at Hogwarts School of Witchcraft and Wizardry.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSOhiofMm0yV-QkYxpua3tEl1g-tZEtIfXG8zZAOK3Uv8oWX2uGWmeZ3gRPclq8q4zLcrvOyCD_fzqlqY5OuRj4oudVugspp2E6FDTYMPElOMH6GR8Gb4FX"
+  },
+  {
+    "id": 8,
+    "name": "A Convenience Store by the Sea",
+    "author": "Sonoko Machida",
+    "description": "A comforting and reflective novel set around a small seaside convenience store.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQPKIdpBmjBMyLjx0wCqzio3C-oc5QqLd5jBVOSYzhsv52GTtAv9C79nPptfi4LUwGHS38t7XeFfiU7gnjEGZuK7KXeroSf"
+  },
+  {
+    "id": 9,
+    "name": "Beartown",
+    "author": "Fredrik Backman",
+    "description": "An  story about a small town, hockey dreams, and the consequences of silence.",
+    "imageUrl": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSmo36sprrF3SCPU5tngQB5r25axxwqcVKBHz970vPwfzCxJny6VU60G_lcdz3bi5ZSzzTmNKfY1_fLee_pXp1VZL4OD35q"
+  },
+  {
+    "id": 10,
+    "name": "Before the Coffee Gets Cold",
+    "author": "Toshikazu Kawaguchi",
+    "description": "A magical café where customers can travel back in time under strict rules.",
+    "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSsOtYcO6jdewQSdCDOcF8MGrdGtcOYJDe5KrCerGca0lq-R4vvYAP2suQkVzrN8nnvI4BJMk_UHnUARZkjWmndVCIRbuQt"
+  },
+  {
+    "id": 11,
+    "name": "Tuesdays with Morrie",
+    "author": "Mitch Albom",
+    "description": "A deeply inspiring memoir about life lessons learned from a dying professor.",
+    "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDjYe0mrdo-KyJCU_-B7rhnttWtIWNkr2Gz_YekB8_ZYfYKcs_aeqjZyebbVXqex9tx9nwZbhwUYMpFq3cg98lV7ZZ90fQeqKbZKaKqLE"
+  },
+  {
+    "id": 12,
+    "name": "Welcome to the Hyunam-dong Bookshop",
+    "author": "Hwang Bo-Reum",
+    "description": "A comforting novel about finding meaning and connection through books and community.",
+    "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRjFLH3PBys2TvCMF7yTzkYns8_C260g8jku393MDO5F5E0TjnWxcQtM2jUXTu4Zsms9anxsYct-OEdFoBjzhBFPt3IfuILOdeDTMJCj2UEXhZkfAZ7tgNV-Q"
+  }
+]

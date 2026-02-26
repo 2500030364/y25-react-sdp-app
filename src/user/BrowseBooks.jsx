@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import booksData from '../data/Books.json';
 
 const BrowseBooks = () => {
 
@@ -6,11 +7,42 @@ const BrowseBooks = () => {
   const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
-    const storedBooks =
-      JSON.parse(localStorage.getItem('libraryBooks')) || [];
 
-    setBooks(storedBooks);
-  }, []);
+  const storedBooks =
+    JSON.parse(localStorage.getItem('libraryBooks')) || [];
+
+  let finalBooks = [];
+
+  if (storedBooks.length === 0) {
+    finalBooks = booksData;
+    localStorage.setItem(
+      'libraryBooks',
+      JSON.stringify(booksData)
+    );
+  } else {
+
+    // Merge JSON books + stored books
+    finalBooks = [...booksData];
+
+    storedBooks.forEach(book => {
+      const exists = finalBooks.find(
+        b => b.id === book.id
+      );
+
+      if (!exists) {
+        finalBooks.push(book);
+      }
+    });
+
+    localStorage.setItem(
+      'libraryBooks',
+      JSON.stringify(finalBooks)
+    );
+  }
+
+  setBooks(finalBooks);
+
+}, []);
 
   const handleBorrow = (book) => {
 
@@ -71,14 +103,10 @@ const BrowseBooks = () => {
             >
               <div style={{ height: '200px' }}>
                 <img
-                  src={book.imageUrl}
-                  alt={book.name}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                  }}
-                />
+                src={book.imageUrl} alt={book.name}
+                style={{
+                  width: '100%', height: '100%',
+                  objectFit: 'contain', backgroundColor: '#f5f5f5'}} />
               </div>
 
               <div style={{ padding: '20px' }}>
