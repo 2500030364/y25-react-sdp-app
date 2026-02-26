@@ -120,25 +120,3 @@ const Registration = () => {
 };
 
 export default Registration;
-/*1  App.jsx
-2  MainNavbar.jsx
-3  Home.jsx
-4  About.jsx
-5  Login.jsx
-6  Registration.jsx
-7  UserLogin.jsx
-8  AdminLogin.jsx
-9  AdminNavbar.jsx
-10 UserNavbar.jsx
-11 AdminHome.jsx
-12 UserHome.jsx
-13 Books.json
-14 BookCard.jsx
-15 SearchBar.jsx
-16 BrowseBooks.jsx
-17 MyBooks.jsx
-18 ViewBooks.jsx
-19 AddBook.jsx
-20 Borrow/Return logic
-21 Final optimizations
-*/
