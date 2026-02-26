@@ -1,0 +1,73 @@
+import React from 'react';
+import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+import AdminHome from './AdminHome';
+import AddBook from './AddBook';
+import ViewBooks from './ViewBooks';
+import './admin.css';
+
+const AdminNavbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('isAdmin');
+    sessionStorage.removeItem('adminUsername');
+
+    navigate('/');
+    window.location.reload();
+  };
+
+  return (
+    <div className="admin-container">
+
+      <nav className="admin-navbar">
+
+        <div className="navbar-header">
+          <h1>Admin Dashboard</h1>
+        </div>
+
+        <ul className="navbar-links">
+
+          <li>
+            <Link to="/admin/home" className="nav-link">
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/admin/add-book" className="nav-link">
+              Add Book
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/admin/view-books" className="nav-link">
+              View Books
+            </Link>
+          </li>
+
+          <li>
+            <button onClick={handleLogout} className="logout-btn">
+              Logout
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div className="admin-content">
+
+        <Routes>
+          <Route path="/admin/home" element={<AdminHome />} />
+          <Route path="/admin/add-book" element={<AddBook />} />
+          <Route path="/admin/view-books" element={<ViewBooks />} />
+        </Routes>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default AdminNavbar;

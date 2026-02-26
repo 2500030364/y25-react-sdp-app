@@ -1,0 +1,219 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f5ef;
+  font-family: 'Montserrat', sans-serif;
+  color: #3d3d3d;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background-color: #7d8b6a;
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ================= DROPDOWN ================= */
+
+.nav-item-dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  z-index: 1000;
+  display: none;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: #3d3d3d;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.dropdown-link:hover {
+  background-color: #f3f5ef;
+  color: #7d8b6a;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+  width: 100%;
+  padding: 180px 20px;
+  text-align: center;
+  background-color: #f3f5ef;
+}
+
+.hero-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #4a4a4a;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #6f6f6f;
+  margin-bottom: 45px;
+}
+
+.hero-btn {
+  padding: 16px 55px;
+  background-color: #7d8b6a;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: #8c9a77;
+}
+
+/* ================= LOGIN & REGISTRATION ================= */
+
+.login-container,
+.registration-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f5ef;
+}
+
+.login-card,
+.registration-card {
+  background: white;
+  padding: 80px 70px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.login-card h1,
+.registration-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #6f6f6f;
+}
+
+.form-group input {
+  padding: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7d8b6a;
+}
+
+.submit-btn {
+  padding: 16px;
+  background-color: #7d8b6a;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #8c9a77;
+}

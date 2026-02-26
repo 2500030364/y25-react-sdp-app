@@ -1,0 +1,114 @@
+import React, { useState, useEffect } from 'react';
+
+const BrowseBooks = () => {
+
+  const [books, setBooks] = useState([]);
+  const [successMessage, setSuccessMessage] = useState('');
+
+  useEffect(() => {
+    const storedBooks =
+      JSON.parse(localStorage.getItem('libraryBooks')) || [];
+
+    setBooks(storedBooks);
+  }, []);
+
+  const handleBorrow = (book) => {
+
+    const existingBorrowed =
+      JSON.parse(localStorage.getItem('borrowedBooks')) || [];
+
+    const alreadyBorrowed = existingBorrowed.find(
+      b => b.id === book.id
+    );
+
+    if (alreadyBorrowed) {
+      alert('Book already borrowed');
+      return;
+    }
+
+    existingBorrowed.push(book);
+
+    localStorage.setItem(
+      'borrowedBooks',
+      JSON.stringify(existingBorrowed)
+    );
+
+    setSuccessMessage('Book borrowed successfully');
+
+    setTimeout(() => setSuccessMessage(''), 3000);
+  };
+
+  return (
+    <div>
+      <h2>Browse Books</h2>
+
+      {successMessage && (
+        <div style={{ color: '#28a745', marginTop: '15px' }}>
+          {successMessage}
+        </div>
+      )}
+
+      {books.length === 0 ? (
+        <p style={{ marginTop: '20px' }}>
+          No books available.
+        </p>
+      ) : (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: '25px',
+          marginTop: '30px'
+        }}>
+          {books.map((book, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: '#fff',
+                borderRadius: '10px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.08)'
+              }}
+            >
+              <div style={{ height: '200px' }}>
+                <img
+                  src={book.imageUrl}
+                  alt={book.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
+
+              <div style={{ padding: '20px' }}>
+                <h3 style={{ marginBottom: '10px' }}>
+                  {book.name}
+                </h3>
+
+                <p style={{ fontSize: '14px', color: '#666' }}>
+                  <strong>Author:</strong> {book.author}
+                </p>
+
+                <p style={{ fontSize: '14px', color: '#777', marginTop: '8px' }}>
+                  {book.description}
+                </p>
+
+                <button
+                  onClick={() => handleBorrow(book)}
+                  className="submit-btn"
+                  style={{ marginTop: '15px', width: '100%' }}
+                >
+                  Borrow
+                </button>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default BrowseBooks;

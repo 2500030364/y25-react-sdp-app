@@ -1,0 +1,45 @@
+.user-container {
+  min-height: 100vh;
+  background-color: #f6f8f3;
+}
+
+.user-navbar {
+  background-color: #8fa87c;
+  color: white;
+  padding: 25px 60px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  opacity: 0.85;
+}
+
+.logout-btn {
+  background: white;
+  color: #738063;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.user-content {
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+  color: #2f2f2f;
+}
