@@ -113,7 +113,7 @@ const AddBook = () => {
             name="description"
             value={formData.description}
             onChange={handleChange}
-            placeholder="Enter book description"
+            placeholder="Enter Book Description"
             required
           />
         </div>
