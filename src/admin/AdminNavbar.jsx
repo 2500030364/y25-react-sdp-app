@@ -23,7 +23,7 @@ const AdminNavbar = () => {
       <nav className="admin-navbar">
 
         <div className="navbar-header">
-          <h1>Admin Dashboard</h1>
+          <h1> Dashboard </h1>
         </div>
 
         <ul className="navbar-links">

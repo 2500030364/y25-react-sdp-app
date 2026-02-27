@@ -24,7 +24,7 @@ const UserNavbar = () => {
       <nav className="user-navbar">
 
         <div className="navbar-header">
-          <h1>User Dashboard</h1>
+          <h1> Dashboard </h1>
         </div>
 
         <ul className="navbar-links">
