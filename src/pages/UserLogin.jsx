@@ -45,7 +45,7 @@ const UserLogin = () => {
         password: ''
       });
 
-      navigate('/');
+      navigate('/user/home');
       window.location.reload();
 
     } else {
