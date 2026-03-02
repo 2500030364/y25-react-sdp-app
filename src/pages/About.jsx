@@ -8,8 +8,8 @@ export default function About() {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ffffff",   // White background
-    color: "#556B2F",             // Olive green text
+    backgroundColor: "#ffffff",  
+    color: "#556B2F",             
     textAlign: "center"
   }
 
