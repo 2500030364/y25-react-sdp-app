@@ -8,41 +8,61 @@ const BrowseBooks = () => {
 
   useEffect(() => {
 
-  const storedBooks =
-    JSON.parse(localStorage.getItem('libraryBooks')) || [];
+    const storedBooks =
+      JSON.parse(localStorage.getItem('libraryBooks')) || [];
 
-  let finalBooks = [];
+    let finalBooks = [];
 
-  if (storedBooks.length === 0) {
-    finalBooks = booksData;
-    localStorage.setItem(
-      'libraryBooks',
-      JSON.stringify(booksData)
-    );
-  } else {
-
-    // Merge JSON books + stored books
-    finalBooks = [...booksData];
-
-    storedBooks.forEach(book => {
-      const exists = finalBooks.find(
-        b => b.id === book.id
+    if (storedBooks.length === 0) {
+      finalBooks = booksData;
+      localStorage.setItem(
+        'libraryBooks',
+        JSON.stringify(booksData)
       );
+    } else {
 
-      if (!exists) {
-        finalBooks.push(book);
-      }
-    });
+      finalBooks = [...booksData];
 
-    localStorage.setItem(
-      'libraryBooks',
-      JSON.stringify(finalBooks)
-    );
-  }
+      storedBooks.forEach(book => {
+        const exists = finalBooks.find(
+          b => b.id === book.id
+        );
 
-  setBooks(finalBooks);
+        if (!exists) {
+          finalBooks.push(book);
+        }
+      });
 
-}, []);
+      localStorage.setItem(
+        'libraryBooks',
+        JSON.stringify(finalBooks)
+      );
+    }
+
+    fetch("https://openlibrary.org/search.json?q=library")
+      .then(res => res.json())
+      .then(data => {
+        const apiBooks = data.docs.slice(0, 6).map((item, index) => ({
+          id: "api" + index,
+          name: item.title,
+          author: item.author_name ? item.author_name[0] : "Unknown",
+          description: "Book fetched from Open Library API",
+          imageUrl: item.cover_i
+            ? `https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`
+            : "https://via.placeholder.com/150"
+        }));
+        const mergedBooks = [...finalBooks, ...apiBooks];
+
+        setBooks(mergedBooks);
+
+      })
+      .catch(error => {
+
+        console.log("API error:", error);
+        setBooks(finalBooks);
+
+      });
+  }, []);
 
   const handleBorrow = (book) => {
 
@@ -85,12 +105,15 @@ const BrowseBooks = () => {
           No books available.
         </p>
       ) : (
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-          gap: '25px',
-          marginTop: '30px'
-        }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: '25px',
+            marginTop: '30px'
+          }}
+        >
+
           {books.map((book, index) => (
             <div
               key={index}
@@ -103,10 +126,15 @@ const BrowseBooks = () => {
             >
               <div style={{ height: '200px' }}>
                 <img
-                src={book.imageUrl} alt={book.name}
-                style={{
-                  width: '100%', height: '100%',
-                  objectFit: 'contain', backgroundColor: '#f5f5f5'}} />
+                  src={book.imageUrl}
+                  alt={book.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    backgroundColor: '#f5f5f5'
+                  }}
+                />
               </div>
 
               <div style={{ padding: '20px' }}>
