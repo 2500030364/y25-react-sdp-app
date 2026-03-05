@@ -1,50 +1,68 @@
-.admin-container {
-  min-height: 100vh;
-  background-color: #f6f8f3;
+.admin-container{
+min-height:100vh;
+background-color:#f6f8f3;
 }
 
-.admin-navbar {
-  background-color: #738063;
-  color: white;
-  padding: 25px 60px;
+.admin-navbar{
+background-color:#738063;
+color:white;
+padding:28px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:relative;
 }
 
-.navbar-header h1 {
-  font-weight: 600;
-  letter-spacing: 1px;
+.admin-logo{
+font-size:24px;
+font-weight:600;
+letter-spacing:1px;
 }
 
-.navbar-links {
-  display: flex;
-  gap: 30px;
-  margin-top: 15px;
-  list-style: none;
+.logo-link{
+color:white;
+text-decoration:none;
 }
 
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
+.admin-menu{
+list-style:none;
+display:flex;
+gap:40px;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
 }
 
-.nav-link:hover {
-  opacity: 0.85;
+.admin-menu .nav-link{
+color:white;
+text-decoration:none;
+font-size:16px;
+padding:6px 0;
 }
 
-.logout-btn {
-  background: white;
-  color: #738063;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-left: auto;
-  font-weight: 600;
+.nav-link:hover{
+opacity:0.85;
 }
 
-.admin-content {
-  padding: 60px;
-  max-width: 1200px;
-  margin: auto;
-  color: #2f2f2f;
+.admin-right{
+display:flex;
+align-items:center;
+}
+
+.logout-btn{
+background:white;
+color:#738063;
+border:none;
+padding:8px 22px;
+border-radius:25px;
+cursor:pointer;
+font-weight:600;
+font-size:16px;
+}
+
+.admin-content{
+padding:60px;
+max-width:1200px;
+margin:auto;
+color:#2f2f2f;
 }

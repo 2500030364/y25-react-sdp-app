@@ -12,7 +12,6 @@ const AdminNavbar = () => {
   const handleLogout = () => {
     sessionStorage.removeItem('isAdmin');
     sessionStorage.removeItem('adminUsername');
-
     navigate('/');
     window.location.reload();
   };
@@ -22,12 +21,12 @@ const AdminNavbar = () => {
 
       <nav className="admin-navbar">
 
-        <div className="navbar-header">
-          <h1> Dashboard </h1>
-        </div>
-
-        <ul className="navbar-links">
-
+        <div className="admin-logo">
+          <h2 className="logo-link">
+            Olive Library
+            </h2>
+            </div>
+        <ul className="admin-menu">
           <li>
             <Link to="/admin/home" className="nav-link">
               Home
@@ -46,13 +45,12 @@ const AdminNavbar = () => {
             </Link>
           </li>
 
-          <li>
-            <button onClick={handleLogout} className="logout-btn">
-              Logout
-            </button>
-          </li>
-
         </ul>
+        <div className="admin-right">
+          <button onClick={handleLogout} className="logout-btn">
+            Logout
+          </button>
+        </div>
 
       </nav>
 

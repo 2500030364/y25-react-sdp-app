@@ -23,11 +23,13 @@ const UserNavbar = () => {
 
       <nav className="user-navbar">
 
-        <div className="navbar-header">
-          <h1> Dashboard </h1>
+        <div className="user-logo">
+          <h2 className="logo-text">
+            Olive Library
+          </h2>
         </div>
 
-        <ul className="navbar-links">
+        <ul className="user-menu">
 
           <li>
             <Link to="/user/home" className="nav-link">
@@ -47,13 +49,12 @@ const UserNavbar = () => {
             </Link>
           </li>
 
-          <li>
-            <button onClick={handleLogout} className="logout-btn">
-              Logout
-            </button>
-          </li>
-
         </ul>
+        <div className="user-right">
+          <button onClick={handleLogout} className="logout-btn">
+            Logout
+          </button>
+        </div>
 
       </nav>
 

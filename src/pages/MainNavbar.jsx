@@ -13,6 +13,7 @@ const MainNavbar = () => {
 
       <nav className="navbar">
         <div className="navbar-container">
+
           <div className="navbar-logo">
             <Link to="/" className="logo-link">
               Digital Library Portal
@@ -32,8 +33,9 @@ const MainNavbar = () => {
             <li className="nav-item">
               <Link to="/registration" className="nav-link">Registration</Link>
             </li>
-
-            <li className="nav-item nav-item-dropdown">
+          </ul>
+          <div className="nav-right">
+            <div className="nav-item nav-item-dropdown">
               <button className="nav-link dropdown-btn">
                 Login ▼
               </button>
@@ -51,9 +53,8 @@ const MainNavbar = () => {
                   </Link>
                 </li>
               </ul>
-            </li>
-
-          </ul>
+            </div>
+          </div>
         </div>
       </nav>
 
