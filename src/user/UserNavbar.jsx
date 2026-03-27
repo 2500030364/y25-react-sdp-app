@@ -61,9 +61,9 @@ const UserNavbar = () => {
       <div className="user-content">
 
         <Routes>
-          <Route path="/user/home" element={<UserHome />} />
-          <Route path="/user/browse-books" element={<BrowseBooks />} />
-          <Route path="/user/my-books" element={<MyBooks />} />
+         <Route path="home" element={<UserHome />} />
+         <Route path="browse-books" element={<BrowseBooks />} />
+         <Route path="my-books" element={<MyBooks />} />
         </Routes>
 
       </div>

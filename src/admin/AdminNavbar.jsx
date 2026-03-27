@@ -57,9 +57,10 @@ const AdminNavbar = () => {
       <div className="admin-content">
 
         <Routes>
-          <Route path="/admin/home" element={<AdminHome />} />
-          <Route path="/admin/add-book" element={<AddBook />} />
-          <Route path="/admin/view-books" element={<ViewBooks />} />
+          <Route path="home" element={<AdminHome />} />
+          <Route path="add-book" element={<AddBook />} />
+          <Route path="view-books" element={<ViewBooks />} />
+          
         </Routes>
 
       </div>
