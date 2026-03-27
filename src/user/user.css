@@ -63,3 +63,49 @@ max-width:1200px;
 margin:auto;
 color:#2f2f2f;
 }
+
+
+.user-home-wrapper {
+  background: white;
+  padding: 60px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.user-home-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.user-home-sub {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-top: 5px;
+}
+
+.user-box {
+  background: #f7f9f4;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.user-box h2 {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-bottom: 4px;
+}
+
+.user-box p {
+  font-size: 13px;
+  color: #6f6f6f;
+}
+
+.user-box:hover {
+  transform: translateY(-3px);
+}
