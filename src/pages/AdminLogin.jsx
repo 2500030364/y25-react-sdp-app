@@ -43,7 +43,8 @@ const AdminLogin = () => {
         password: ''
       });
 
-      window.location.href = '/admin/home';
+      navigate('/admin/home');
+      window.location.reload();
 
     } else {
       setError('Invalid username or password');
